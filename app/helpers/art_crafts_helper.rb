@@ -1,0 +1,2 @@
+module ArtCraftsHelper
+end

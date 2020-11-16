@@ -14,14 +14,14 @@ ActiveRecord::Schema.define(version: 20201107134752) do
 
   create_table "art_crafts", force: :cascade do |t|
     t.string   "title",           null: false
-    t.integer  "type",            null: false
+    t.integer  "category",        null: false
     t.text     "main_characters"
     t.integer  "genre"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["category"], name: "index_art_crafts_on_category"
     t.index ["main_characters"], name: "index_art_crafts_on_main_characters"
     t.index ["title"], name: "index_art_crafts_on_title"
-    t.index ["type"], name: "index_art_crafts_on_type"
   end
 
 end

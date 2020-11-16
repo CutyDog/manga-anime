@@ -2,7 +2,7 @@ class CreateArtCrafts < ActiveRecord::Migration[5.0]
   def change
     create_table :art_crafts do |t|
       t.string :title, null: false
-      t.integer :type, null: false
+      t.integer :category, null: false
       t.text :main_characters
       t.integer :genre
 
@@ -10,7 +10,7 @@ class CreateArtCrafts < ActiveRecord::Migration[5.0]
       
       t.index :title
       t.index :main_characters
-      t.index :type
+      t.index :category
     end
   end
 end

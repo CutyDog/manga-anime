@@ -6,21 +6,17 @@
     <div class="col-6 p-3">
       <h3>人気マンガ</h3>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a href="sns.html" target="_self">鬼滅の刃</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">ハイキュー！！</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">東京グール</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">化物語</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">呪術廻戦</a></li>
+        <% @comics.each  do |comic| %>
+          <li class="list-group-item"><%= link_to comic.title, art_craft_path(comic.id) %></a></li>
+        <% end %>
       </ul>
     </div>
     <div class="col-6 p-3">
       <h3>人気アニメ</h3>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a href="sns.html" target="_self">鬼滅の刃</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">青ブタ</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">無能なナナ</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">Re:ゼロから始める異世界生活</a></li>
-        <li class="list-group-item"><a href="sns.html" target="_self">五等分の花嫁</a></li>
+        <% @animes.each  do |anime| %>
+          <li class="list-group-item"><%= link_to anime.title, art_craft_path(anime.id) %></li>
+        <% end %>
       </ul>
     </div>
   </div>
