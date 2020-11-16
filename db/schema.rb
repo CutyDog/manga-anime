@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201116123943) do
+ActiveRecord::Schema.define(version: 20201116131407) do
 
   create_table "art_crafts", force: :cascade do |t|
     t.string   "title",           null: false
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20201116123943) do
     t.index ["category"], name: "index_art_crafts_on_category"
     t.index ["main_characters"], name: "index_art_crafts_on_main_characters"
     t.index ["title"], name: "index_art_crafts_on_title"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id",      null: false
+    t.integer  "art_craft_id", null: false
+    t.text     "content",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["art_craft_id"], name: "index_comments_on_art_craft_id"
   end
 
   create_table "users", force: :cascade do |t|
