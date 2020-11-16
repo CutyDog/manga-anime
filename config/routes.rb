@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get '/' => 'home#top'
   resources :art_crafts, only: [:show]
   

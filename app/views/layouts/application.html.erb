@@ -24,7 +24,11 @@
           <a class="nav-item nav-link" href="search.html">検索</a>
           <a class="nav-item nav-link" href="favorite.html">お気に入り</a>
           <a class="nav-item nav-link" href="config.html">設定</a>
-          <a class="nav-item nav-link" href="log_in.html">ログイン</a>
+          <% if user_signed_in? %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: 'post nav-item nav-link' %>
+          <% end %>
         </div>
       </div>
     </nav>
