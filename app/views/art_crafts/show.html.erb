@@ -2,7 +2,7 @@
       <div class="row p-3">
         <div class="col-12 p-3"><%= @art_craft.title %></div>
       </div>
-      <% @comments.each do |comment| %>
+      <% @comments.reverse.each do |comment| %>
         <div class="ml-3"><%= comment.user.name %></div>
         <div class="popover right show mx-3 mb-3 mt-1 p-1" style="position:relative; max-width:100%;">
           <div class="arrow"></div>
@@ -14,6 +14,7 @@
         </div>
       <% end %>
     </div>
+    <%= paginate @comments %>
     <div class="container">
        <%= form_for(@comment, url: art_craft_comments_path(@art_craft)) do |f| %>
        <div class="row p-5">
