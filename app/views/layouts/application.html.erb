@@ -20,8 +20,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="home.html">Home<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="search.html">検索</a>
+          <%= link_to 'HOME', root_path, class: "nav-item nav-link" %>
+          <%= link_to '検索', search_art_crafts_path, class: "nav-item nav-link" %>
           <a class="nav-item nav-link" href="favorite.html">お気に入り</a>
           <a class="nav-item nav-link" href="config.html">設定</a>
           <% if user_signed_in? %>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row p-3">
+    <div class="col-12 p-3">マンガ・アニメ好きのためのコミュニティサイト！！</div>
+  </div>
+  <div class="row">
+    <div class="col-12 p-3">
+      <%= form_tag(search_art_crafts_path, method: 'get') do %>
+        <div class="input-group mb-3">
+          <input type="text" name="keyword" value="<%= @keyword %>" class="form-control" placeholder="キーワードで探す" aria-label="Comment text" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">検索</button>
+          </div>
+        </div>
+      <% end %>
+      <ul class="list-group list-group-flush">
+        <% @art_crafts.each  do |art_craft| %>
+          <li class="list-group-item">
+            <%= link_to art_craft.title, art_craft_path(art_craft.id) %>
+            <span class="badge badge-primary"><%= art_craft.display_category %></span>
+          </li>
+        <% end %>
+      </ul>
+      <% if @art_crafts.empty? %>
+        <p><%= @keyword %>にヒットする作品は見つかりませんでした。</p>
+      <% end %>
+    </div>
+  </div>
+</div>
