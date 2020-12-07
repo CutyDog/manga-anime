@@ -19,12 +19,12 @@
    <div class="container">
      <%= form_for(@comment, url: art_craft_comments_path(@art_craft)) do |f| %>
       <div class="row p-5">
-          <div class="input-group mb-3">
-             <%= f.text_field :content, class: "form-control", placeholder: "コメント投稿" %>
-             <div class="input-group-append">
-               <%= f.submit "送信", class: "btn btn-outline-secondary" %>
-             </div>
-          </div>
+         <div class="input-group mb-3">
+            <%= f.text_field :content, class: "form-control", placeholder: "コメント投稿" %>
+            <div class="input-group-append">
+             <%= f.submit "送信", class: "btn btn-outline-secondary" %>
+            </div>
+         </div>
       </div>
      <% end %>
    </div>
