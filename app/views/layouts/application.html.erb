@@ -22,7 +22,7 @@
         <div class="navbar-nav">
           <%= link_to 'HOME', root_path, class: "nav-item nav-link" %>
           <%= link_to '検索', search_art_crafts_path, class: "nav-item nav-link" %>
-          <a class="nav-item nav-link" href="favorite.html">お気に入り</a>
+          <a class="nav-item nav-link" href="/art_crafts/search">お気に入り</a>
           <a class="nav-item nav-link" href="config.html">設定</a>
           <% if user_signed_in? %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>

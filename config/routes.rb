@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'home#top'
   resources :art_crafts, only: [:show] do
+    resources :comments
     get 'search', on: :collection
   end
   
