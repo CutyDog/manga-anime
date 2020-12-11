@@ -1,6 +1,7 @@
 class ArtCraftsController < ApplicationController
   def show
     @art_craft = ArtCraft.find(params[:id])
+    @favorite_art_craft = @art_craft.favorite_art_crafts.find_by(user: current_user)
     @comment = Comment.new
     @comments = @art_craft.comments.order(id: :desc).page(params[:page]).per(10)
   end
