@@ -11,4 +11,5 @@ class ArtCraft < ApplicationRecord
   def display_category
     DISPLAY_CATEGORY[category.to_sym]
   end
+  
 end

@@ -1,7 +1,12 @@
 <div class="container">
   <div class="row p-3">
     <div class="col-12 p-3 site-message">
-      マンガ・アニメ好きのためのコミュニティサイト！！
+      <h2>Information</h2>
+      <h5>
+        <br></br>
+        マンガ、アニメのコミュニティサイト<br></br>
+        マンガ、アニメのコミュニティサイト<br></br>
+      </h5>
     </div>
   </div>
   <div class="row">
@@ -9,7 +14,7 @@
       <h3>人気マンガ</h3>
       <ul class="list-group list-group-flush">
         <% @comics.each  do |comic| %>
-          <li class="list-group-item"><%= link_to comic.title, art_craft_path(comic.id) %></a></li>
+          <li class="list-group-item"><%= link_to comic.title, art_craft_path(comic.id) %></li>
         <% end %>
       </ul>
     </div>
@@ -23,6 +28,7 @@
     </div>
   </div>
 </div>
+
 <div class="container">
     <div class="col-6 p-3">
          イベント情報
@@ -30,24 +36,30 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg"
-           preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide">
-            <title>Placeholder</title><rect width="100%" height="60%" fill="#666"/>
-            <text x="50%" y="30%" fill="#444" dy=".3em">First</text>
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide">
+            <title>Placeholder</title>
+            <rect width="100%" height="80%" fill="#666"/>
+            <text x="50%" y="30%" fill="#444" dy=".3em">
+              First
+            </text>
           </svg>
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg"
-           preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide">
-            <title>Placeholder</title><rect width="100%" height="60%" fill="#666"/>
-            <text x="50%" y="30%" fill="#444" dy=".3em">Second</text>
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide">
+            <title>Placeholder</title>
+            <rect width="100%" height="80%" fill="#666"/>
+            <text x="50%" y="30%" fill="#444" dy=".3em">
+              Second
+            </text>
           </svg>
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg"
-           preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide">
-            <title>Placeholder</title><rect width="100%" height="60%" fill="#666"/>
-            <text x="50%" y="30%" fill="#444" dy=".3em">Third</text>
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="700" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide">
+            <title>Placeholder</title>
+            <rect width="100%" height="80%" fill="#666"/>
+            <text x="50%" y="30%" fill="#444" dy=".3em">
+              Third
+            </text>
           </svg>
         </div>
       </div>

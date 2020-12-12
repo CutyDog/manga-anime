@@ -2,9 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+  /*background-color: #FFEEFF;*/
+  /*background-color: #E0FFFF;*/
+  background-color: white;
+}
+
+
 .site-message {
-  background-image: image-url("oregairu.jpg") !important;
+  background-image: image-url("rengoku.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  height: 400px;
+  background-position: right;
+  background-size: 100% contain;
+  background-color:rgba(255,255,255,0.6);
+  background-blend-mode:lighten;
+  /*background-opacity: .2;*/
+  width: 100%;
+  height: 500px;  
 } 
+
+h2 {
+  font-size: 400%;
+  /*font-weight: bold;*/
+  font-family: 'Caveat', cursive;
+  text-align: left;
+  text-shadow: 1px 1px 2px silver;
+}
+
+h5 {
+  font-size: 160%;
+  font-weight: bold;
+  font-family: "Kokoro";
+  text-align: left;
+  text-shadow: 1px 1px 2px silver;
+}
+
+h3 {
+  font-size: 100%;
+}
+
+.list-group-item {
+background-color: transparent;
+border-top: 1px solid #ddd;
+border-radius: 0;
+color: #fff;
+}
+
+@media (max-width:992px){
+  .site-message {
+    background-image: image-url("oregairu.jpg");
+    background-size: contain;
+    background-position: center;
+  }
+  h2 {
+    font-size: 200%;
+  }
+  h5 {
+    font-size: 80%; 
+  }
+  .list-group-item {
+    font-size: 80%;  
+  }
+}

@@ -15,8 +15,13 @@
       <ul class="list-group list-group-flush">
         <% @art_crafts.each  do |art_craft| %>
           <li class="list-group-item">
-            <%= link_to art_craft.title, art_craft_path(art_craft.id) %>
-            <span class="badge badge-primary"><%= art_craft.display_category %></span>
+            <% if art_craft.category === "comics" %>
+              <%= link_to art_craft.title, art_craft_path(art_craft.id) %>
+              <span class="badge badge-light"><%= art_craft.display_category %></span>
+            <% else %>
+              <%= link_to art_craft.title, art_craft_path(art_craft.id) %>
+              <span class="badge badge-dark"><%= art_craft.display_category %></span>
+            <% end %>
           </li>
         <% end %>
       </ul>
