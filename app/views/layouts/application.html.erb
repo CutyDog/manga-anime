@@ -15,7 +15,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand " href="#">サイト名</a>
+      <a class="navbar-brand " href="#">ロゴ</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,7 +23,7 @@
         <div class="navbar-nav">
           <%= link_to 'HOME', root_path, class: "nav-item nav-link" %>
           <%= link_to '検索', search_art_crafts_path, class: "nav-item nav-link" %>
-          <a class="nav-item nav-link" href="/art_crafts/search">お気に入り</a>
+          <%= link_to 'お気に入り', search_art_crafts_path, class: "nav-item nav-link" %>
           <a class="nav-item nav-link" href="config.html">設定</a>
           <% if user_signed_in? %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>

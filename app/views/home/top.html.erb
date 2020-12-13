@@ -1,17 +1,20 @@
 <div class="container">
   <div class="row p-3">
     <div class="col-12 p-3 site-message">
-      <h2>Information</h2>
+      <h2>Manga/Anime <br/>
+          &ensp;&ensp;Fan Community<br/>
+      </h2>
       <h5>
         <br></br>
-        マンガ、アニメのコミュニティサイト<br></br>
-        マンガ、アニメのコミュニティサイト<br></br>
+        マンガ/アニメ好きのためのコミュニティサイト<br></br>
+        &ensp;&ensp;好きな作品で語り合おう！<br></br>
       </h5>
     </div>
   </div>
   <div class="row">
     <div class="col-6 p-3">
       <h3>人気マンガ</h3>
+      <br></br>
       <ul class="list-group list-group-flush">
         <% @comics.each  do |comic| %>
           <li class="list-group-item"><%= link_to comic.title, art_craft_path(comic.id) %></li>
@@ -20,6 +23,7 @@
     </div>
     <div class="col-6 p-3">
       <h3>人気アニメ</h3>
+      <br></br>
       <ul class="list-group list-group-flush">
         <% @animes.each  do |anime| %>
           <li class="list-group-item"><%= link_to anime.title, art_craft_path(anime.id) %></li>
@@ -30,8 +34,8 @@
 </div>
 
 <div class="container">
-    <div class="col-6 p-3">
-         イベント情報
+    <div class="col-6 p-3 information">
+      イベント情報
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">

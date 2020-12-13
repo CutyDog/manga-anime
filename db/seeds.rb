@@ -10,7 +10,7 @@
   { id: 8, title: 'Re:ゼロから始める異世界生活', type: 'animes' },
   { id: 9, title: '五等分の花嫁', type: 'animes' },
   { id: 10, title: 'ソードアートオンライン', type: 'animes' },
-  { id: 11, title: 'Psycho-Pass', type: 'animes' },
+  { id: 11, title: 'PSYCHO-PASS', type: 'animes' },
   { id: 12, title: 'やはり俺の青春ラブコメは間違っている', type: 'animes' },
   { id: 13, title: 'あひるの空', type: 'comics' },
   { id: 14, title: 'ONEPIECE', type: 'comics' },

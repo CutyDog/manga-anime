@@ -20,26 +20,30 @@ body {
   /*background-opacity: .2;*/
   width: 100%;
   height: 500px;  
-} 
-
-h2 {
+  
+  h2 {
   font-size: 400%;
   /*font-weight: bold;*/
   font-family: 'Caveat', cursive;
   text-align: left;
   text-shadow: 1px 1px 2px silver;
-}
-
-h5 {
-  font-size: 160%;
-  font-weight: bold;
-  font-family: "Kokoro";
-  text-align: left;
-  text-shadow: 1px 1px 2px silver;
-}
+  }
+  
+  h5 {
+  font-size: 140%;
+  /*font-weight: bold;*/
+  /*font-family: "Kokoro";*/
+  text-align: left, bottom;
+  /*text-shadow: 1px 1px 2px silver;*/
+  /*color: #808080;*/
+  color: #800000;
+  }
+} 
 
 h3 {
-  font-size: 100%;
+  font-size: 200%;
+  border-bottom: solid 3px #87CEFA;
+  text-align: bottom;
 }
 
 .list-group-item {
@@ -49,19 +53,42 @@ border-radius: 0;
 color: #fff;
 }
 
+.information {
+  font-size: 150%;
+  position: relative;
+  padding: 0.2em;
+}
+.information:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+}
+
 @media (max-width:992px){
   .site-message {
     background-image: image-url("oregairu.jpg");
     background-size: contain;
     background-position: center;
+    
+    h2 {
+      font-size: 200%;
+    }
+    h5 {
+      font-size: 60%; 
+    }
   }
-  h2 {
-    font-size: 200%;
-  }
-  h5 {
-    font-size: 80%; 
+  
+  h3 {
+  font-size: 100%;
   }
   .list-group-item {
-    font-size: 80%;  
+    font-size: 60%;  
+  }
+  .information {
+    font-size: 80%;
   }
 }

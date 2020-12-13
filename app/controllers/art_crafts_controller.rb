@@ -14,4 +14,5 @@ class ArtCraftsController < ApplicationController
                     ArtCraft.all
                   end
   end
+  
 end

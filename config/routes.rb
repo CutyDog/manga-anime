@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: 'home#top'
   resources :art_crafts, only: [:show] do
     resources :comments
-    resources :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:show, :create, :destroy]
     get 'search', on: :collection
+    get 'favorite', on: :collection
   end
   
 
