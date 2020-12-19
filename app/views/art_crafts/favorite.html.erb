@@ -1,6 +1,5 @@
 <%#<%= link_to 'お気に入り', art_craft_favorite_path(@art_craft, @favorite_art_craft), method: 'show', class: "nav-item nav-link" %>
 
-
 <div class="container">
   <div class="row p-3">
     <div class="col-12 p-3 favorite-message">
@@ -8,7 +7,31 @@
       &ensp;&ensp;Manga/Anime</br>
     </div>
   </div>
-  <div class="row p-3">
+  
+  <% if user_signed_in? %>
+    <div class="row p-3">
+      <div class="col-6 p-3 manga_favorites">
+        <h3>お気に入りマンガ</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="sample_favorite_page.html">ここに</a></li>
+          <li class="list-group-item"><a href="sample_favorite_page.html">お気に入り一覧を</a></li>
+          <li class="list-group-item"><a href="sample_favorite_page.html">表示</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 p-3 anime_favorites">
+        <h3>お気に入りアニメ</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="sample_favorite_page.html">ここに</a></li>
+          <li class="list-group-item"><a href="sample_favorite_page.html">お気に入り一覧を</a></li>
+          <li class="list-group-item"><a href="sample_favorite_page.html">表示</a></li>
+        </ul>
+      </div>
+    </div>
     
-  </div>
-</div>
+  <% else %>
+    <div class="mx-auto" style="width: 200px;">
+      <%= link_to "ログインしてお気に入り一覧を表示", new_user_session_path, class: 'btn btn-outline-secondary' %>
+    </div>
+    
+  <% end %>
