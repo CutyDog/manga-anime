@@ -16,7 +16,7 @@ class ArtCraftsController < ApplicationController
   end
   
   def favorite
-    art_craft_ids = current_user.favorite_art_crafts.pluck(:art_craft_id)
+    art_craft_ids = current_user&.favorite_art_crafts&.pluck(:art_craft_id)
     @comics = ArtCraft.comics.where(id: art_craft_ids)
     @animes = ArtCraft.animes.where(id: art_craft_ids)
   end
