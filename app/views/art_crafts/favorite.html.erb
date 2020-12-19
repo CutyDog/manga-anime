@@ -13,18 +13,18 @@
       <div class="col-6 p-3 manga_favorites">
         <h3>お気に入りマンガ</h3>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="sample_favorite_page.html">ここに</a></li>
-          <li class="list-group-item"><a href="sample_favorite_page.html">お気に入り一覧を</a></li>
-          <li class="list-group-item"><a href="sample_favorite_page.html">表示</a></li>
+          <% @comics.each  do |comic| %>
+            <li class="list-group-item"><%= link_to comic.title, art_craft_path(comic.id) %></li>
+          <% end %>
         </ul>
       </div>
 
       <div class="col-6 p-3 anime_favorites">
         <h3>お気に入りアニメ</h3>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="sample_favorite_page.html">ここに</a></li>
-          <li class="list-group-item"><a href="sample_favorite_page.html">お気に入り一覧を</a></li>
-          <li class="list-group-item"><a href="sample_favorite_page.html">表示</a></li>
+          <% @animes.each  do |anime| %>
+            <li class="list-group-item"><%= link_to anime.title, art_craft_path(anime.id) %></li>
+          <% end %>
         </ul>
       </div>
     </div>
