@@ -1,24 +1,29 @@
-# README
+# MANGA-ANIME APPLICATION
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このアプリケーションに含まれる機能:  
 
-Things you may want to cover:
+* 漫画、アニメコンテンツの作品ごとのコミュニティページ
 
-* Ruby version
+* 作品名で検索
 
-* System dependencies
+* 作品にコメント、閲覧
 
-* Configuration
+* お気に入り作品を登録、一覧表示
 
-* Database creation
+使用言語:
 
-* Database initialization
+* Ruby
 
-* How to run the test suite
+* HTML
 
-* Services (job queues, cache servers, search engines, etc.)
+* CSS
 
-* Deployment instructions
+* Javascript
 
-* ...
+開発環境:  
+
+* AWS/Rails
+
+データベース:  
+
+* MySQL
