@@ -1,4 +1,5 @@
-# MANGA-ANIME APPLICATION (https://manga-anime.herokuapp.com/)
+# MANGA-ANIME APPLICATION 
+(https://manga-anime.herokuapp.com/)
 
 このアプリケーションに含まれる機能:  
 
