@@ -15,5 +15,3 @@ services:
       - "3050:3000"
     depends_on:
       - db
-
-      
