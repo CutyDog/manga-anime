@@ -8,6 +8,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
