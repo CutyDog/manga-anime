@@ -14,5 +14,13 @@ RSpec.describe ArtCraftsController, type: :controller do
       get :search, params: params
       expect(response.status).to eq(200)
     end
+  end
+
+  describe '#favorite' do
+
+    it "is success" do
+      get :favorite
+      expect(response.status).to eq(200)
+    end  
   end  
 end
