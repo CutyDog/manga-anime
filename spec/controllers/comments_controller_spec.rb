@@ -6,20 +6,30 @@ RSpec.describe CommentsController, type: :controller do
   describe '#create' do
     let(:art_craft) { create(:art_craft) }
     let(:user) { create(:user) }  
+    let(:content) { 'comment' }
 
-    it "is successed ver.1" do 
-      one = create(:comment, art_craft_id: art_craft.id, user_id: user.id)
-      expect(one.id).to eq(1)
+    let(:params) {
+      {
+        art_craft_id: art_craft.id,
+        comment: {
+          content: content
+        }
+      }
+    }
+
+    before do
+      allow(controller)
+        .to receive(:current_user)
+        .and_return(user)
+      post :create, params: params
+    end
+
+    it "is successed" do 
+      expect(response.status).to eq(302) 
     end  
 
-    it "is successed ver.2" do 
-      two = create(:comment, art_craft_id: art_craft.id, user_id: user.id)
-      expect(two.id).to eq(2)
+    it "created correct comment" do 
+      expect(Comment.find_by(user: user, art_craft: art_craft).content).to eq(content)
     end     
-
-    it "uploaded correct content" do
-      three = create(:comment, art_craft_id: art_craft.id, user_id: user.id)
-      expect(three.content).to eq('content')
-    end
   end
 end
