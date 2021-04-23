@@ -8,7 +8,7 @@ RSpec.describe HomeController, type: :controller do
     
     it "is success" do
       get :top
-      expect(response.status).to eq(201)
+      expect(response.status).to eq(200)
     end  
   end
 
