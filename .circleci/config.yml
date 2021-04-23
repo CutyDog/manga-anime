@@ -57,9 +57,9 @@ jobs:
       - run: bundle exec rake db:schema:load
 
 # rubocopを走らせる記述です。
-      - run:
-          name: Rubocop
-          command: bundle exec rubocop
+      # - run:
+      #     name: Rubocop
+      #     command: bundle exec rubocop
 
 # rspecを走らせる記述です。
       # run tests!
