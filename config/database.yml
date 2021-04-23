@@ -13,4 +13,7 @@ development:
 
 test:
   <<: *default
+  host: 127.0.0.1
+  username: postgres
+  password: app_test
   database: myapp_test
